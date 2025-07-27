@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pubmed-paper-fetcher"
+version = "0.1.0"
+description = "Fetches papers from PubMed based on query and filters company-affiliated authors."
+authors = ["Meghana <vmeghana059@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "pubmed_paper_fetcher" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.5.3"
+requests = "^2.32.4"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_paper_fetcher.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
